@@ -1,7 +1,8 @@
 pipeline {
-    agent {
-        node {label 'python'}
-    }
+    agent any
+    // {
+    //     node {label 'python'}
+    // }
     environment {
         APPLICATION_NAME = 'Hello-World.py'
         GIT_REPO="https://github.com/MarcoBolo1/Python1.git"
