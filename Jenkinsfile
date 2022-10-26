@@ -1,9 +1,8 @@
 pipeline {
     agent {
-        docker {
-            image 'python'
+        docker 'https://github.com/jenkinsci/jnlp-agents'
         }
-    }
+    
     environment {
         APPLICATION_NAME = 'Hello-World.py'
         GIT_REPO="https://github.com/MarcoBolo1/Python1.git"
