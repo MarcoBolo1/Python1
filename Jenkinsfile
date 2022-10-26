@@ -23,6 +23,7 @@ pipeline {
         stage ("Install Dependencies") {
             steps {
                 sh """
+                pwd
                 pip install virtualenv
                 virtualenv --no-site-packages .
                 source bin/activate
