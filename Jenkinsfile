@@ -1,5 +1,5 @@
 pipeline {
-   agent { docker { image 'python' } }
+   agent any
     // {
     //     node {label 'python'}
     // }
