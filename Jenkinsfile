@@ -3,6 +3,7 @@ pipeline {
         docker {
             image 'python'
         }
+    }
     environment {
         APPLICATION_NAME = 'Hello-World.py'
         GIT_REPO="https://github.com/MarcoBolo1/Python1.git"
