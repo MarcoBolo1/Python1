@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Test python app') {
       agent {
-        docker { image 'python:3.8.8-slim-buster' }
+        docker { image '00cd1fb8bdcc' }
       }
       steps {
         script {
