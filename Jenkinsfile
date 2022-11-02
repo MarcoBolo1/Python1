@@ -7,12 +7,10 @@ pipeline {
       }
     }
     stage('Test python app') {
-      agent {
-        docker { image '00cd1fb8bdcc' }
-      }
+      agent agent1
       steps {
         script {
-          dir('app') {
+          {
             sh '''
               python -m venv env
               env/bin/pip install -r requirements-dev.txt
