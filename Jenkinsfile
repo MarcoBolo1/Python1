@@ -1,23 +1,15 @@
 pipeline {
-  agent any
+  agent { docker { image 'python:3.7.2' } }
   stages {
-    stage('Checkout') {
+    stage('build') {
       steps {
-        checkout scm
+        sh 'pip install -r requirements.txt'
       }
     }
-    stage('Test python app') {
-      agent agent1
+    stage('test') {
       steps {
-        script {
-          {
-            sh '''
-              git -version
-              python -m venv env
-              env/bin/pip install -r requirements-dev.txt
-             
-            '''
-          }
-        }
-      }
-    }}}
+        sh 'python test.py'
+      }   
+    }
+  }
+}
