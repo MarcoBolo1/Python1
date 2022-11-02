@@ -6,7 +6,7 @@ pipeline {
              label 'agent1'
 }
             steps {
-                sh 'python Hello-World.py'
+                sh 'Hello-World.py'
             }
         }
     }
