@@ -1,12 +1,9 @@
 pipeline {
-    agent none
+    agent { docker { image 'python:3.10.7-alpine' } }
     stages {
-        stage('Build') {
-           agent {
-             label 'agent1'
-}
+        stage('build') {
             steps {
-                sh 'python -version'
+                sh 'python --version'
             }
         }
     }
