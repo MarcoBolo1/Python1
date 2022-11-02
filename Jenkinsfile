@@ -12,6 +12,7 @@ pipeline {
         script {
           {
             sh '''
+              git -version
               python -m venv env
               env/bin/pip install -r requirements-dev.txt
              
