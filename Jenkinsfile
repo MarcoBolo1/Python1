@@ -14,7 +14,7 @@ pipeline {
              label 'agent1'
 }
             steps {
-                sh 'python -m Hello-World.py'
+                sh 'python --version'
             }
         }
     }
