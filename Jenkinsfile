@@ -14,7 +14,7 @@ pipeline {
              label 'agent1'
 }
             steps {
-                sh 'python Hello-World.py'
+                sh 'python /home/jenkins/workspace/python1/Hello-World.py'
             }
         }
     }
